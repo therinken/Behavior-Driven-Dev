@@ -39,16 +39,16 @@ describe("About Arrays", function() {
 
     it("should understand array literals", function() {
         var array = [];
-        expect(array).to.equal([]);
+        expect(array).to.equal[0];
 
         array[0] = 1;
-        expect(array).to.equal([1]);
+        expect(array).to.equal[1];
 
         array[1] = 2;
-        expect(array).to.equal([1, 2]);
+        expect(array).to.equal[1, 2];
 
         array.push(3);
-        expect(array).to.equal([1, 2, 3]);
+        expect(array).to.equal[1, 2, 3];
     });
 
     it("should understand array length", function() {
@@ -68,13 +68,13 @@ describe("About Arrays", function() {
     it("should slice arrays", function() {
         var array = ["peanut", "butter", "and", "jelly"];
 
-        expect(array.slice(0, 1)).to.equal(["peanut"]);
-        expect(array.slice(0, 2)).to.equal(["peanut", "butter"]);
-        expect(array.slice(2, 2)).to.equal([]);
-        expect(array.slice(2, 20)).to.equal(["and", "jelly"]);
-        expect(array.slice(3, 0)).to.equal([]);
-        expect(array.slice(3, 100)).to.equal(["jelly"]);
-        expect(array.slice(5, 1)).to.equal([]);
+        expect(array.slice(0, 1)).to.equal["peanut"];
+        expect(array.slice(0, 2)).to.equal["peanut", "butter"];
+        expect(array.slice(2, 2)).to.equal[0];
+        expect(array.slice(2, 20)).to.equal["and", "jelly"];
+        expect(array.slice(3, 0)).to.equal[0];
+        expect(array.slice(3, 100)).to.equal["jelly"];
+        expect(array.slice(5, 1)).to.equal[0];
     });
 
     it("should know array references", function() {
@@ -99,22 +99,22 @@ describe("About Arrays", function() {
         var array = [1, 2];
         array.push(3);
 
-        expect(array).to.equal([1, 2, 3]);
+        expect(array).to.equal[1, 2, 3];
 
         var poppedValue = array.pop();
         expect(poppedValue).to.equal(3);
-        expect(array).to.equal([1, 2]);
+        expect(array).to.equal[1, 2];
     });
 
     it("should know about shifting arrays", function() {
         var array = [1, 2];
 
         array.unshift(3);
-        expect(array).to.equal([3, 1, 2]);
+        expect(array).to.equal[3, 1, 2];
 
         var shiftedValue = array.shift();
         expect(shiftedValue).to.equal(3);
-        expect(array).to.equal([1, 2]);
+        expect(array).to.equal[1, 2];
     });
 });
 
